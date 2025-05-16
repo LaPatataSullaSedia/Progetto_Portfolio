@@ -1,0 +1,73 @@
+<nav class="navbar">
+  <!-- Logo cliccabile -->
+  <button class="logo-button">
+    <img src="https://via.placeholder.com/40" alt="Logo" class="logo" (click)="reloadPage()"/>
+  </button>
+
+  <!-- Menu hamburger -->
+  <button class="hamburger-button" (click)="toggleSettings()">
+    <div [class.open]="settingsOpen" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>
+
+  <!-- Menu laterale -->
+  <div class="side-panel" [class.open]="settingsOpen">
+    <h2>Impostazioni</h2>
+    <p>krhcfsrcù ci ci rieic  i c yiuci5gyiiyu5c gyi   c 5gcyius5eggjseg5fis5e kcg yu5c s5 gcs5 gcks gc</p>
+    <ul class="settings-links">
+      <li>
+        <button>
+          <img src="https://cdn-icons-png.flaticon.com/128/1828/1828496.png" alt="Privacy" />
+          Privacy
+        </button>
+      </li>
+      <li>
+        <button>
+          <img src="https://cdn-icons-png.flaticon.com/128/1828/1828843.png" alt="Segnala" />
+          Segnala
+        </button>
+      </li>
+      <li>
+        <button>
+          <img src="https://cdn-icons-png.flaticon.com/128/561/561127.png" alt="Contatti" />
+          Contatti
+        </button>
+      </li>
+    </ul>
+    <div class="login-section">
+      <button class="login-button">
+        <img src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png" alt="Login Icon" />
+        SEI MEMBRO DEI PICCIONI ?
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="cookie-container">
+  @if(showCookieBox){
+  <div class="cookie-box" id="cookieBox" >
+    <img src="https://via.placeholder.com/60" alt="Cookie Icon" class="cookie-icon">
+    <div class="cookie-text">
+      <h3 class="tirolo-cookie">I Cookie</h3>
+      <p>
+        Questo sito utilizza i cookie per garantire la migliore esperienza possibile. 
+        Usiamo cookie tecnici, analitici e di profilazione per personalizzare i contenuti e gli annunci, 
+        fornire le funzioni dei social media e analizzare il nostro traffico. Condividiamo inoltre informazioni 
+        sul modo in cui utilizzi il nostro sito con i nostri partner che si occupano di analisi dei dati web, 
+        pubblicità e social media, i quali potrebbero combinarle con altre informazioni che hai fornito loro 
+        o che hanno raccolto
+      </p>
+      <div class="cookie-buttons">
+        <button class="accept">Accetta</button>
+        <button class="decline">Rifiuta</button>
+        <button class="settings">Impostazioni</button>
+      </div>
+    </div>
+  </div>
+  }
+  <button class="cookie-toggle" (click)="toggleCookieBox()">
+    <img src="https://cdn-icons-png.flaticon.com/128/1047/1047813.png" alt="Cookie Button" />
+  </button>
+</div>

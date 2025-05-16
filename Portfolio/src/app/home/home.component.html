@@ -1,1 +1,68 @@
-<p>home works!</p>
+
+<div class="carousel">
+  <input type="radio" name="slides" id="slide1" checked>
+  <input type="radio" name="slides" id="slide2">
+  <input type="radio" name="slides" id="slide3">
+  <input type="radio" name="slides" id="slide4">
+  <input type="radio" name="slides" id="slide5">
+
+  <ul class="carousel__slides">
+    <li class="carousel__slide slide1">
+      <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1">
+      <div class="caption">
+        <h2>Titolo Slide 1</h2>
+        <p>Descrizione breve della prima slide.</p>
+        <a href="#">Scopri di più</a>
+      </div>
+    </li>
+    <li class="carousel__slide slide2">
+      <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
+      <div class="caption">
+        <h2>Titolo Slide 2</h2>
+        <p>Seconda descrizione interessante.</p>
+        <a href="#">Approfondisci</a>
+      </div>
+    </li>
+    <li class="carousel__slide slide3">
+      <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3">
+      <div class="caption">
+        <h2>Titolo Slide 3</h2>
+        <p>Terza slide con contenuto utile.</p>
+        <a href="#">Dettagli</a>
+      </div>
+    </li>
+    <li class="carousel__slide slide4">
+      <img src="https://via.placeholder.com/800x400?text=Slide+4" alt="Slide 4">
+      <div class="caption">
+        <h2>Titolo Slide 4</h2>
+        <p>Testo per la quarta immagine.</p>
+        <a href="#">Esplora</a>
+      </div>
+    </li>
+    <li class="carousel__slide slide5">
+      <img src="https://via.placeholder.com/800x400?text=Slide+5" alt="Slide 5">
+      <div class="caption">
+        <h2>Titolo Slide 5</h2>
+        <p>Ultima slide, clicca per saperne di più.</p>
+        <a href="#">Vai alla pagina</a>
+      </div>
+    </li>
+  </ul>
+
+  <div class="carousel__controls">
+    <label for="slide1"></label>
+    <label for="slide2"></label>
+    <label for="slide3"></label>
+    <label for="slide4"></label>
+    <label for="slide5"></label>
+  </div>
+</div>
+<script>
+    let currentSlide = 1;
+    setInterval(() => {
+      currentSlide++;
+      if (currentSlide > 5) currentSlide = 1;
+      document.getElementById(`slide${currentSlide}`).checked = true;
+    }, 4000);
+  </script>
+  
